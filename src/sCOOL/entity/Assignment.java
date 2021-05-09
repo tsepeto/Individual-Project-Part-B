@@ -11,6 +11,7 @@ import java.time.temporal.WeekFields;
 import java.util.ArrayList;
 import java.util.Locale;
 import sCOOL.entity.dao.AssignmentDao;
+import sCOOL.entity.dao.GenericDao;
 
 /**
  *
@@ -232,7 +233,7 @@ public class Assignment {
     @Override
     public String toString(){
         String format = "%1$-30s %2$-55s %3$-15s %4$-5s %5$-5s %6$-5s %7$-5s";
-        return String.format(format, this.title, this.description, this.subDateTime.format(DateTimeFormatter.ofPattern(data.daTiFormat)),
+        return String.format(format, this.title, this.description, this.subDateTime.format(DateTimeFormatter.ofPattern(GenericDao.daTiFormat)),
                 "O.M.", this.oralMark, "T.M.", this.totalMark);}
     
     

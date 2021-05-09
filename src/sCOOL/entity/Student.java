@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import sCOOL.entity.dao.GenericDao;
 import sCOOL.entity.dao.StudentDao;
 
 
@@ -219,7 +220,7 @@ public class Student {
     @Override
     public String toString(){
         String format = "%1$-15s %2$-20s %3$-15s %4$-18s";
-        return String.format(format, this.firstName, this.lastName, this.dateOfBirth.format(DateTimeFormatter.ofPattern(data.daTiFormat)),
+        return String.format(format, this.firstName, this.lastName, this.dateOfBirth.format(DateTimeFormatter.ofPattern(GenericDao.daTiFormat)),
                             "  -  " + this.tuitionFees +"€");
     }
     

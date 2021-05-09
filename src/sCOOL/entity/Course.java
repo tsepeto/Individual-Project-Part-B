@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import sCOOL.entity.dao.CourseDao;
+import sCOOL.entity.dao.GenericDao;
 
 
 
@@ -287,6 +288,6 @@ public class Course{
     public String toString(){
         String format = "%1$-30s %2$-20s %3$-20s %4$-12s %5$-3s %6$-12s";
         return String.format(format, this.title, this.stream, this.type,
-                this.start_date.format(DateTimeFormatter.ofPattern(data.daTiFormat)), "-", this.end_date.format(DateTimeFormatter.ofPattern(data.daTiFormat)));
+                this.start_date.format(DateTimeFormatter.ofPattern(GenericDao.daTiFormat)), "-", this.end_date.format(DateTimeFormatter.ofPattern(GenericDao.daTiFormat)));
     }
 }
